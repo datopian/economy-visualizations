@@ -21,10 +21,7 @@ const goldStandardData = goldData.filter(d => d.year <= 1970);
 const modernEra = goldData.filter(d => d.year > 1970);
 ```
 
-<div class="hero">
-  <h1>Economic Data Portal</h1>
-  <p>Explore 191 years of gold price history, from the Gold Standard era through modern financial markets.</p>
-</div>
+
 
 ```js
 display(html`<div class="dashboard-container">
