@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>The Golden Century - Historical Gold Prices | PortalJS Data App</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.93a02f71.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.93a02f71.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.0e7dc575.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.73a8ec5a.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.4ef1d259.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+
+    <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+    <script type="module">
+      import { inject } from 'https://esm.sh/@vercel/analytics@1.5.0';
+      inject();
+    </script>
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.0e7dc575.js";
+import {registerFile} from "./_observablehq/stdlib.73a8ec5a.js";
+
+registerFile("./data/annual-gold-prices.csv", {"name":"./data/annual-gold-prices.csv","mimeType":"text/csv","path":"./_file/data/annual-gold-prices.f1178b83.csv","lastModified":1761657023288,"size":2369});
+
+define({id: "b6403fbb", inputs: ["FileAttachment","d3"], outputs: ["goldRaw","goldData","latestPrice","firstPrice","allTimeHigh","allTimeHighYear","totalIncrease","goldStandardEnd","priceIn1970","goldStandardData","modernEra"], body: async (FileAttachment,d3) => {
+// Load gold price data
+const goldRaw = FileAttachment("./data/annual-gold-prices.csv").csv({typed: true});
+const goldData = (await goldRaw).map(d => ({
+  year: +d.Date,
+  price: +d.Price
+})).filter(d => d.price > 0);
+
+// Calculate key metrics
+const latestPrice = goldData[goldData.length - 1].price;
+const firstPrice = goldData[0].price;
+const allTimeHigh = d3.max(goldData, d => d.price);
+const allTimeHighYear = goldData.find(d => d.price === allTimeHigh).year;
+const totalIncrease = ((latestPrice - firstPrice) / firstPrice * 100).toFixed(0);
+
+// Find the gold standard era (fixed price period)
+const goldStandardEnd = 1971; // Nixon ended gold standard
+const priceIn1970 = goldData.find(d => d.year === 1970)?.price || 35;
+
+// Categorize eras
+const goldStandardData = goldData.filter(d => d.year <= 1970);
+const modernEra = goldData.filter(d => d.year > 1970);
+return {goldRaw,goldData,latestPrice,firstPrice,allTimeHigh,allTimeHighYear,totalIncrease,goldStandardEnd,priceIn1970,goldStandardData,modernEra};
+}});
+
+define({id: "d03e9061", inputs: ["html","Inputs"], outputs: ["Scrubber"], body: (html,Inputs) => {
+function Scrubber(values, {format = value => value, initial = 0, direction = 1, delay = null, autoplay = true, loop = true, loopDelay = null, alternate = false} = {}) {
+  values = Array.from(values);
+  const form = html`<form style="font: 12px var(--sans-serif); display: flex; height: 33px; align-items: center;"><button name=b type=button style="margin-right: 0.4em; width: 5em;"></button><label style="display: flex; align-items: center;"><input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style="width: 180px;"><output name=o style="margin-left: 0.4em;"></output></label></form>`;
+  let frame = null, timer = null, interval = null;
+  const start = () => { form.b.textContent = "Pause"; if (delay === null) frame = requestAnimationFrame(tick); else interval = setInterval(tick, delay); };
+  const stop = () => { form.b.textContent = "Play"; if (frame !== null) cancelAnimationFrame(frame), frame = null; if (timer !== null) clearTimeout(timer), timer = null; if (interval !== null) clearInterval(interval), interval = null; };
+  const running = () => frame !== null || timer !== null || interval !== null;
+  const step = () => { form.i.valueAsNumber = (form.i.valueAsNumber + direction + values.length) % values.length; form.i.dispatchEvent(new CustomEvent("input", {bubbles: true})); };
+  const tick = () => { if (form.i.valueAsNumber === (direction > 0 ? values.length - 1 : direction < 0 ? 0 : NaN)) { if (!loop) return stop(); if (alternate) direction = -direction; if (loopDelay !== null) { if (frame !== null) cancelAnimationFrame(frame), frame = null; if (interval !== null) clearInterval(interval), interval = null; timer = setTimeout(() => (step(), start()), loopDelay); return; } } if (delay === null) frame = requestAnimationFrame(tick); step(); };
+  form.i.oninput = event => { if (event && event.isTrusted && running()) stop(); form.value = values[form.i.valueAsNumber]; form.o.value = format(form.value, form.i.valueAsNumber, values); };
+  form.b.onclick = () => { if (running()) return stop(); direction = alternate && form.i.valueAsNumber === values.length - 1 ? -1 : 1; form.i.valueAsNumber = (form.i.valueAsNumber + direction) % values.length; form.i.dispatchEvent(new CustomEvent("input", {bubbles: true})); start(); };
+  form.i.oninput();
+  if (autoplay) start(); else stop();
+  Inputs.disposal(form).then(stop);
+  return form;
+}
+return {Scrubber};
+}});
+
+define({id: "24723090", inputs: ["goldData","selectedYear"], outputs: ["selectedData","currentPrice"], body: (goldData,selectedYear) => {
+const selectedData = goldData.filter(d => d.year <= selectedYear);
+const currentPrice = selectedData[selectedData.length - 1];
+return {selectedData,currentPrice};
+}});
+
+define({id: "017663d5", inputs: ["Plot","selectedData","currentPrice"], outputs: ["goldTimeline"], body: (Plot,selectedData,currentPrice) => {
+function goldTimeline({width} = {}) {
+  const isMobile = width < 640;
+  return Plot.plot({
+    width,
+    height: isMobile ? 500 : 700,
+    marginLeft: isMobile ? 60 : 90,
+    marginRight: isMobile ? 20 : 120,
+    marginBottom: isMobile ? 60 : 80,
+    marginTop: 30,
+    x: {
+      label: "Year",
+      grid: true,
+      ticks: isMobile ? 5 : 15,
+      tickFormat: "d"
+    },
+    y: {
+      label: isMobile ? "Price (USD, log)" : "Price per Troy Ounce (USD, log scale)",
+      grid: true,
+      type: "log",
+      ticks: [10, 20, 50, 100, 200, 500, 1000, 2000, 3000],
+      labelAnchor: "center",
+      labelArrow: "none"
+    },
+    marks: [
+      // Background area fill with gradient
+      Plot.areaY(selectedData, {
+        x: "year",
+        y: "price",
+        fill: "url(#goldGradient)",
+        fillOpacity: 0.5,
+        curve: "catmull-rom"
+      }),
+      // Main gold line
+      Plot.line(selectedData, {
+        x: "year",
+        y: "price",
+        stroke: "#fbbf24",
+        strokeWidth: 4,
+        curve: "catmull-rom",
+        tip: true,
+        title: d => `${d.year}: $${d.price.toFixed(2)}`
+      }),
+      // Current year highlight
+      Plot.dot([currentPrice], {
+        x: "year",
+        y: "price",
+        r: 12,
+        fill: "#fcd34d",
+        stroke: "#ffffff",
+        strokeWidth: 4
+      }),
+      Plot.text([currentPrice], {
+        x: "year",
+        y: "price",
+        text: d => isMobile ? `$${d.price.toFixed(0)}` : `${d.year}: $${d.price.toFixed(2)}`,
+        dx: isMobile ? -30 : -60,
+        dy: -10,
+        fill: "#fcd34d",
+        fontSize: isMobile ? 11 : 13,
+        fontWeight: "bold",
+        textAnchor: "end"
+      }),
+      // 1971 Nixon Shock marker
+      Plot.ruleX([1971], {
+        stroke: "#dc2626",
+        strokeWidth: isMobile ? 2 : 3,
+        strokeDasharray: "6,4",
+        opacity: 0.9
+      }),
+      Plot.text([{year: 1971, price: 1800}], {
+        x: "year",
+        y: "price",
+        text: isMobile ? ["1971: Nixon"] : ["1971: Nixon Ends Gold Standard"],
+        fill: "#dc2626",
+        fontSize: isMobile ? 10 : 13,
+        fontWeight: "bold",
+        dx: isMobile ? -5 : -10,
+        textAnchor: "end"
+      }),
+      // 2008 Financial Crisis marker
+      Plot.ruleX([2008], {
+        stroke: "#f59e0b",
+        strokeWidth: isMobile ? 2 : 3,
+        strokeDasharray: "6,4",
+        opacity: 0.8
+      }),
+      Plot.text([{year: 2008, price: 900}], {
+        x: "year",
+        y: "price",
+        text: isMobile ? ["2008: Crisis"] : ["2008: Financial Crisis"],
+        fill: "#f59e0b",
+        fontSize: isMobile ? 10 : 13,
+        fontWeight: "bold",
+        dx: isMobile ? -5 : -10,
+        textAnchor: "end"
+      }),
+      // Gold Standard baseline
+      Plot.ruleY([35], {
+        stroke: "#22c55e",
+        strokeWidth: 2,
+        strokeDasharray: "3,3",
+        opacity: 0.6
+      }),
+      ...(isMobile ? [] : [Plot.text([{year: 1900, price: 35}], {
+        x: "year",
+        y: "price",
+        text: ["Gold Standard Era ($35) →"],
+        fill: "#22c55e",
+        fontSize: 13,
+        dy: -8,
+        textAnchor: "middle"
+      })])
+    ]
+  });
+}
+return {goldTimeline};
+}});
+
+define({id: "e91e1b41", mode: "inline", inputs: ["resize","goldTimeline","display"], body: async (resize,goldTimeline,display) => {
+display(await(
+resize((width) => goldTimeline({width}))
+))
+}});
+
+define({id: "41cd0958", inputs: ["d3","view","Scrubber"], outputs: ["years","selectedYear"], body: (d3,view,Scrubber) => {
+const years = d3.range(1833, 2025);
+const selectedYear = view(Scrubber(years, {
+  delay: 150,
+  loop: false,
+  initial: years.length - 1,
+  autoplay: false,
+  format: d => d
+}));
+return {years,selectedYear};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="portaljs-banner">
+  <div class="portaljs-banner-content">
+    <span class="portaljs-banner-icon">🌀</span>
+    <div class="portaljs-banner-text">
+      <p class="portaljs-banner-title">Create beautiful data portals with PortalJS</p>
+      <p class="portaljs-banner-description">The open-source framework for building data catalogs, dashboards, and visualizations.</p>
+    </div>
+  </div>
+  <a href="https://www.portaljs.com/" target="_blank" rel="noopener noreferrer" class="portaljs-banner-cta">
+    Get Started Free <span class="portaljs-banner-cta-arrow">→</span>
+  </a>
+</div>
+<style>
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--theme-background-alt);
+  color: var(--theme-foreground);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  border: 2px solid var(--theme-foreground-faint);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--theme-foreground-alt);
+  max-width: 100%;
+}
+
+.hero p {
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  color: var(--theme-foreground-muted);
+  max-width: 100%;
+}
+
+* {
+  overflow-anchor: none !important;
+}
+
+.card, .card > *, .card svg, .card figure {
+  overflow-anchor: none !important;
+  contain: layout style paint;
+}
+
+
+svg text {
+  fill: var(--theme-foreground) !important;
+}
+
+[id^="plot-tip-"],
+[role="tooltip"],
+[aria-live="polite"] {
+  color: var(--theme-foreground) !important;
+  background: var(--theme-background) !important;
+}
+
+[id^="plot-tip-"] *,
+[role="tooltip"] *,
+[aria-live="polite"] * {
+  color: var(--theme-foreground) !important;
+}
+
+.card, .grid {
+  max-width: 100% !important;
+}
+
+.card {
+  min-height: 750px;
+}
+</style>
+<div class="hero">
+  <h1>💰 The Golden Century</h1>
+  <p>191 Years of Gold Price History (1833-2024)</p>
+</div>
+<div class="observablehq observablehq--block"><!--:b6403fbb:--></div>
+<div class="observablehq observablehq--block"><!--:d03e9061:--></div>
+<div class="observablehq observablehq--block"><!--:24723090:--></div>
+<hr>
+<h2 id="the-great-transformation-191-years-of-gold" tabindex="-1"><a class="observablehq-header-anchor" href="#the-great-transformation-191-years-of-gold">📈 The Great Transformation: 191 Years of Gold</a></h2>
+<p>This visualization tells the incredible story of gold - from over a century of stability to explosive modern growth. Use the timeline controls below the graph to explore the price at any point in history!</p>
+<div class="observablehq observablehq--block"><!--:017663d5:--></div>
+<div class="card">
+  <observablehq-loading></observablehq-loading><!--:e91e1b41:-->
+</div>
+<div class="observablehq observablehq--block"><!--:41cd0958:--></div>
+<svg width="0" height="0">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.9"></stop>
+      <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:0.6"></stop>
+      <stop offset="100%" style="stop-color:#78350f;stop-opacity:0.2"></stop>
+    </linearGradient>
+  </defs>
+</svg>
+<hr>
+<p><strong>Data Source:</strong> <a href="https://datahub.io/core/gold-prices" target="_blank" rel="noopener noreferrer">World Gold Council via DataHub.io</a></p>
+<p><strong>Period:</strong> 1833-2024 (191 years)
+<strong>Unit:</strong> US Dollars per Troy Ounce</p>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./"><span>PortalJS Data App</span></a></nav>
+<div>Built with Observable Framework. Source: World Gold Council via DataHub.io.</div>
+</footer>
+</div>
+</body>
+</html>
